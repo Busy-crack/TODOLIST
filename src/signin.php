@@ -28,6 +28,8 @@ if(!$ok){
     goto display;
 }
 
+$email_verification; 
+
 $_SESSION["user"] = $user;
 header("Location: index.php");
 exit;
@@ -47,9 +49,9 @@ display :
         <input required type="email" name="login">
         <label for="password">Mot de passe</label>
         <input required type="password" name="password">
-        <label for="password">Répéter le mot de passe</label>
-        <input required type="password" name="password">
-        <input type="submit">
+        <label for="verify_password">Répéter le mot de passe</label>
+        <input required type="password" name="verify_password">
+        <input type="submit" value="Inscription">
     </form>
     </body>
 </html>

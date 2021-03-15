@@ -1,6 +1,6 @@
 <?php
 try{
-    $dsn = "mysql:host=localhost;dbname=reddit;port=3306;charset=utf8mb4";
+    $dsn = "mysql:host=localhost;dbname=todo;port=3306;charset=utf8mb4";
     $user = "root";
     $pwd = "";
 
