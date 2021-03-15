@@ -44,11 +44,11 @@ display :
 <title>Login</title>
     <form action="login.php" method="POST">
         <label for="login">Adresse e-mail</label>
-        <input type="email" name="login">
+        <input required type="email" name="login">
         <label for="password">Mot de passe</label>
-        <input type="password" name="password">
+        <input required type="password" name="password">
         <label for="password">Répéter le mot de passe</label>
-        <input type="password" name="password">
+        <input required type="password" name="password">
         <input type="submit">
     </form>
     </body>
