@@ -28,7 +28,9 @@ if(!$ok){
     goto display;
 }
 
-$email_verification; 
+if (isset($_POST['password']) && $_POST['password'] !== $_POST['password_confirm']) {
+    $errors['password_confirm'] = 'Les deux mots de passe ne correspondent pas';
+}
 
 $_SESSION["user"] = $user;
 header("Location: index.php");
@@ -41,16 +43,16 @@ display :
 
 <!DOCTYPE html>
 <html>
-<head>Login</head>
+<head>Signin</head>
 <body>
-<title>Login</title>
+<title>Signin</title>
     <form action="login.php" method="POST">
         <label for="login">Adresse e-mail</label>
         <input required type="email" name="login">
         <label for="password">Mot de passe</label>
         <input required type="password" name="password">
-        <label for="verify_password">Répéter le mot de passe</label>
-        <input required type="password" name="verify_password">
+        <label for="password_confirm">Répéter le mot de passe</label>
+        <input required type="password" name="password_confirm">
         <input type="submit" value="Inscription">
     </form>
     </body>
